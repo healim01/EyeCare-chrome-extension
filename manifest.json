@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Eye Care",
+  "version": "1.0",
+  "description": "눈 건강을 위해 20분마다 휴식을 알려줍니다.",
+  "permissions": ["notifications", "alarms"],
+  "action": {
+    "default_popup": "popup/popup-v1.html",
+    "default_title": "눈을 위해 휴식하기"
+  },
+  "background": {
+    "service_worker": "background/background-v1.js"
+  },
+  "icons": {
+    "16": "icons/icon.png",
+    "48": "icons/icon.png",
+    "128": "icons/icon.png"
+  },
+  "options_page": "options/options.html"
+}

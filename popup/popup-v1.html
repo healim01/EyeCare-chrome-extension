@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eye Care (아이케어)</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        text-align: center;
+        width: 300px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #2aab67;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 8px;
+      }
+      button:hover {
+        background-color: #2aab67;
+      }
+      select {
+        margin-top: 10px;
+        padding: 5px;
+        width: 100%;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>휴식할 시간!</h1>
+    <p>
+      20-20-20 규칙: 20분마다 20피트(6m) 밖 물체를 20초간 보면서 휴식해보세요!
+    </p>
+
+    <select id="intervalSelect">
+      <option value="20">20분마다 휴식</option>
+      <option value="30">30분마다 휴식</option>
+      <option value="40">40분마다 휴식</option>
+    </select>
+
+    <button id="reset">타이머 재설정</button>
+
+    <script src="./popup.js"></script>
+  </body>
+</html>

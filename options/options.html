@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eye Care Settings</title>
+  </head>
+  <body>
+    <h1>Settings</h1>
+    <p>Set the break interval (minutes):</p>
+    <input type="number" id="interval" min="1" value="20" />
+    <button id="save">Save</button>
+
+    <script>
+      document.getElementById('save').addEventListener('click', () => {
+        const interval = parseInt(document.getElementById('interval').value);
+        chrome.storage.sync.set({ breakInterval: interval }, () => {
+          alert('Settings saved!');
+        });
+      });
+
+      // 기존 설정 로드
+      chrome.storage.sync.get('breakInterval', (data) => {
+        if (data.breakInterval) {
+          document.getElementById('interval').value = data.breakInterval;
+        }
+      });
+    </script>
+  </body>
+</html>
